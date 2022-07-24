@@ -9,7 +9,7 @@ judith = turtle.Turtle()
 judith.pensize(6)
 judith.pencolor('brown')
 
-'''trunk'''
+# trunk
 judith.setheading(90)
 judith.pu()
 judith.setx(-250)
