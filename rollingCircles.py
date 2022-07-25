@@ -46,7 +46,7 @@ v_line = plt.plot([-R, R], [0, 0], color=(1, 173/255, 1/255), linewidth=1.0)
 discretized_t = np.linspace(0, t, 140);
 thetaPlanet = np.linspace(0, 2*np.pi, 50);
 
-# logic to roll the circle
+# logic to roll the circles
 for i in range(0, len(discretized_t)):
     if i == 0:
         theta = np.linspace(0, 2*np.pi, 361);
