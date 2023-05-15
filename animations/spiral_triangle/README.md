@@ -12,9 +12,9 @@ I usually doodle it and I wanted to recreate it in Python (see [output](#spiral-
     2. Then I continued and marched forward `polygon_side_length-segment_length` distance to complete the second side of triangle. 
     3. Similar actions are done when drawing the third side.
 5. To draw the first inward line segment (`side_length_1`) of the spiral, I utilized that point whose x,y co-ordinates I stored in `pt` list while drawing second side of the triangle. After drawing the third side of the triangle: 
-    1. I utilized turtle module's `towards` method to get the angle towards the point on the second side of triangle. 
+    1. I used turtle module's `distance` method to get the distance between current location and the point on the second side of the triangle. (Since I am back to starting point after completing the triangle, current location is starting point). Then I utilized `towards` method to get the angle towards that point. 
     2. Then I used `left` method to orient the turtle's head towards that point on the second side of triangle. 
-    3. Finally I used `forward` method to march and complete the spiral `side_length_1`. Step 4's actions are executed in between to get the information of point on this `side_length_1` as this will help to draw the next 'side_length_1'.
+    3. Finally I used `forward` method to march and complete the spiral's first inward line segment `side_length_1`. Step 4's actions are executed in between to get the information of point on this `side_length_1` as this will help to draw the next `side_length_1`.
     4. I am doing this over and over in `for` loop. I used `if` conditional to `break` out of the `for` loop if spiral's `side_length_1` becomes < 1.
 
 ### Construction of spiral triangle
