@@ -6,7 +6,7 @@ I usually doodle it and I wanted to recreate it in Python (see [output](#spiral-
 
 ## spiral_triangle.py
 
-Following explanation is for [spiral_triangle.py](spiral_triangle.py). Also, it is to note that I developed this logic thinking that I will be drawing the triangle as horizontally aligned (turtle starts facing East) and not at an angle (turtle not headed say at 20 degrees North of East). I modified this in [spiral_triangle_using_class.py](spiral_triangle_using_class.py)
+Following explanation is for [spiral_triangle.py](spiral_triangle.py). Also, it is to note that I developed this logic thinking that I will be drawing the triangle as horizontally aligned (turtle starts facing East) and not at an angle (turtle not headed say at 20 degrees North of East). I modified this in [spiral_triangles_using_class.py](spiral_triangles_using_class.py)
 
 1. I created a drawing board using turtle module's `Screen` method. I changed my turtle's shape to circle using `shape` method. I moved the turtle to x=-90, y=-90 using `penup`, `goto`, `pendown` method. I have used `speed()` method with `0` argument, as `0` makes the turtle move fastest possible. 
 2. Then, I defined polygon parameters. `n` denotes the number of sides in a polygon. `n=3` denotes that it's a triangle. `polygon_turn_angle` is exterior angle of the polygon.
