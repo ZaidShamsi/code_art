@@ -20,9 +20,9 @@ I studied Theory of Machines in my undergrad course. Coupler curves are part of 
 
 | Links                   | Distance |
 | ----------------------- | -------- |
-| Crank $O_1$A            | a        |
+| Crank $O_1A$            | a        |
 | Coupler AB              | b        |
-| Crank B$O_2$            | c        |
+| Crank $BO_2$            | c        |
 | Fixed frame $O_2 O_1$   | d        |
 | point P on link AB (AP) | r        |
 
@@ -33,16 +33,16 @@ I studied Theory of Machines in my undergrad course. Coupler curves are part of 
 | $\angle A O_1 O_2$ | phi ($\phi$)     |
 | $\angle A O_2 O_1$ | alpha ($\alpha$) |
 | $\angle A O_2 B$   | theta ($\theta$) |
-| $O_2$B with x-axis | delta ($\delta$) |
+| $O_2B$ with x-axis | delta ($\delta$) |
 | slope of line AB   | gamma ($\gamma$) |
 
 The key is, once the angles are known following relation can be used to find the co-ordinates:
-$$ x = cos(angle) $$
-$$ y = sin(angle) $$
+$$x = cos(angle)$$
+$$y = sin(angle)$$
 
 ## Calculation of angles
 
-1. $\phi$ is defined in the code. 2$\pi$ radians are discretized into 180 points. So, $O_1 A$ is the driving crank.
+1. $\phi$ is defined in the code. 2 $\pi$ radians are discretized into 180 points. So, $O_1 A$ is the driving crank.
 2. $\theta$ is calculated using the cosine formula.
    1. $cos(\theta) = \frac{O_2A^2 + c^2 - b^2}{2.O_2A.c}$
 3. $\delta$:
@@ -63,7 +63,7 @@ $$ y = sin(angle) $$
 # Output
 
 ## animation saved as mp4
-[coupler curve: infinity.mp4](infinity_coupler_curve.mp4)
+https://github.com/ZaidShamsi/code_art/assets/103277308/ac821c04-ab7d-4060-b424-aee197c46ad3
 
 ## final traced coupler curve: infinity
 ![final coupler curve infinity](infinity_coupler_curve.png)
