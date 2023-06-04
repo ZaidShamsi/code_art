@@ -1,5 +1,14 @@
 from matplotlib import pyplot as plt
+from matplotlib.animation import FFMpegWriter
 import numpy as np
+
+metadata = dict(title='infinity coupler curve', artist='ZaidShamsi',
+                comment='four bar infinity coupler curve')
+writer = FFMpegWriter(fps=15, metadata=metadata)
+
+# ffmpeg executable downloaded from https://github.com/BtbN/FFmpeg-Builds/releases for windows 64
+# update the path to ffmpeg.exe (usually located in bin folder)
+plt.rcParams['animation.ffmpeg_path'] = r'..\..\ffmpeg.exe'
 
 # Given lenghts of the four links:
 # a is the length of link O1A
@@ -18,16 +27,16 @@ phi = np.linspace(0, 2*np.pi, 181) # rad
 # Co-oridnates of point O1
 # O1 is the fixed pin on left
 xO1 = 0;
-yO1 = 0;
+yO1 = 0.2;
 
 # Co-ordinates of point A
-xA = a*np.cos(phi);
-yA = a*np.sin(phi);
+xA = xO1 + a*np.cos(phi);
+yA = yO1 + a*np.sin(phi);
 
 # Co-ordinates of point O2
 # O2 is the fixed pin on right
 xO2 = d;
-yO2 = 0;
+yO2 = 0.2;
 
 # Construct line AO2,
 # len of AO2
@@ -54,8 +63,8 @@ delta[phi <= np.pi] = np.pi + (-alpha[phi <= np.pi] + theta[phi <= np.pi])
 delta[phi >= np.pi] = np.pi - (theta[phi >= np.pi] - alpha[phi >= np.pi])
 
 # Coordinates of point B
-xB = d + c*np.cos(delta);
-yB = c*np.sin(delta);
+xB = xO2 + c*np.cos(delta);
+yB = yO2 + c*np.sin(delta);
 
 # Slope of line AB
 gamma = np.arctan((yB - yA)/(xB - xA));
@@ -64,6 +73,7 @@ gamma = np.arctan((yB - yA)/(xB - xA));
 xP = xA + r*np.cos(gamma);
 yP = yA + r*np.sin(gamma);
 
+fig = plt.figure()
 plt.axis('equal')
 plt.xlim([-0.5, 1.0])
 plt.ylim([-0.5, 1.0])
@@ -81,17 +91,20 @@ plotCircle([xO1, yO1], 0.01)
 plotCircle([xO2, yO2], 0.01)
 
 # Animating the mechanism
-for i in range(0, len(phi)):
-    pinP = plotCircle([xP[i], yP[i]], 0.01)
-    crank1, = plt.plot([0, xA[i]], [0, yA[i]], 'k', linewidth=1.5);
-    coupler, = plt.plot([xA[i], xB[i]], [yA[i], yB[i]], 'k', linewidth=1.5);
-    crank2, = plt.plot([xB[i], xO2], [yB[i], yO2], 'k', linewidth=1.5);
-    pointP = plt.plot(xP[i], yP[i], color = 'k', marker='.', markersize = 1.0);
-    plt.pause(0.0001)
-    if i != len(phi):
-        pinP.remove()
-        crank1.remove()
-        coupler.remove()
-        crank2.remove()
+with writer.saving(fig, "infinity_coupler_curve.mp4", 100):
+    for i in range(0, len(phi)):
+        pinP = plotCircle([xP[i], yP[i]], 0.01)
+        crank1, = plt.plot([xO1, xA[i]], [yO1, yA[i]], 'k', linewidth=1.5);
+        coupler, = plt.plot([xA[i], xB[i]], [yA[i], yB[i]], 'k', linewidth=1.5);
+        crank2, = plt.plot([xB[i], xO2], [yB[i], yO2], 'k', linewidth=1.5);
+        pointP = plt.plot(xP[i], yP[i], color = 'k', marker='.', markersize = 1.0);
+        plt.pause(0.01)
+        writer.grab_frame()
+        if i != len(phi):
+            pinP.remove()
+            crank1.remove()
+            coupler.remove()
+            crank2.remove()
+    plt.savefig('infinity_coupler_curve.png')
 
 plt.show()
