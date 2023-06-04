@@ -23,4 +23,10 @@ These drawings/animations are drawn in Python using turtle or Matplotlib.
 
 - [fibonacci spiral heart](fibonacci_spiral)
     - ![fibonacci_spiral_heart](https://github.com/ZaidShamsi/my_python_scripts/assets/103277308/35d9ac18-e3e7-4ccc-9997-607c98c6fbd0)
+
+### four bar mechanism: coupler curve: infinity
+
+[coupler curve: infinity](coupler_curves/infinity)
+
+https://github.com/ZaidShamsi/code_art/assets/103277308/ac821c04-ab7d-4060-b424-aee197c46ad3
  
