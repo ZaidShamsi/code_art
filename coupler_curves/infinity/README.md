@@ -60,9 +60,15 @@ $$ y = sin(angle) $$
 | B     | $x_B = x_{O_2} + d + c.cos(\delta)$ | $y_B = x_{O_2} + c.sin(\delta)$ |
 | P     | $x_P = x_A + r.cos(\gamma)$         | $y_P = y_P + r.sin(\gamma)$     |
 
-# Ouput
+# Output
 
-<video src="infinity_coupler_curve.mp4" controls title="Title"></video>
+## animation saved as mp4
+[coupler curve: infinity.mp4](infinity_coupler_curve.mp4)
+
+## final traced coupler curve: infinity
+![final coupler curve infinity](infinity_coupler_curve.png)
+
+### Work products of executing the code
 
 Executing the code 
 - will generate a crude animation and 
