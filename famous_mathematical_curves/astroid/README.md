@@ -1,0 +1,3 @@
+# Output
+
+![astroid](astroid.png)
