@@ -1,6 +1,5 @@
 import numpy as np
 from matplotlib import pyplot as plt
-import matplotlib.transforms as transform
 
 def butterfly():
     x = np.linspace(0, 1, 101)
@@ -21,14 +20,16 @@ x, y = butterfly()
 # #81B622 -> lime green
 # #3D550C -> olive green
 
-fig = plt.figure(facecolor='#81B622')
+# fig = plt.figure(facecolor='#81B622')
+fig = plt.figure()
 ax = fig.add_subplot(111)
 
 ax.set_aspect('equal')
 ax.axis('off')
 ax.set_title('Butterfly', color='#3D550C', fontsize=16, fontname='Candara', fontweight='bold')
 
-ax.set_facecolor("#005A9C")
+# once axis are turned off -> ax.axis('off) -> facecolor will also hide 
+# ax.set_facecolor("#005A9C")
 
 # swapping x and y to orient horizontally
 ax.plot(y, x, linestyle='-', linewidth=4, color='#A91B60')
