@@ -4,8 +4,8 @@ Read
 
 ## Equations
 - $r^{2} = cos\phi(4a sin^{2}\phi - b)$
-- $x = rcos\phi$
-- $y = rsin\phi$
+  - $x = rcos\phi$
+  - $y = rsin\phi$
 
 # Output
 
