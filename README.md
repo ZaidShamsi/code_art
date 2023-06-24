@@ -29,4 +29,14 @@ These drawings/animations are drawn in Python using turtle or Matplotlib.
 [coupler curve: infinity](coupler_curves/infinity)
 
 https://github.com/ZaidShamsi/code_art/assets/103277308/ac821c04-ab7d-4060-b424-aee197c46ad3
+
+### famous mathematical curves
+
+Beauty! Its amazing to see that simple algebraic equations can generate beautiful curves. These curves can also be found in nature.
+
+- [logarithmic spiral](famous_mathematical_curves/logarithmic_spiral)
+  - an intersting [anecdote](https://geoffjward.medium.com/a-tale-of-two-tombstones-strange-but-true-7ce6fab7fded): The famous mathematician, Jacob Bernoulli was so awestruck by logarithmic spiral that he wanted this to be engraved on his gravestone. The engraver did carve out, but it is an [archimedean spiral](famous_mathematical_curves/archimedean_spiral).
+  - ![logarithmic spiral](famous_mathematical_curves/logarithmic_spiral/logarithmic_spiral.png)
+  
+  See more curves at [famous mathematical curves](famous_mathematical_curves)
  
