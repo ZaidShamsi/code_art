@@ -1,29 +1,56 @@
 import numpy as np
-from matplotlib import pyplot as plt
 
 # Archimedean spiral
-def archimedean_spiral(number_of_rotations):
-    phi = np.linspace(0, number_of_rotations*np.pi, number_of_rotations*360)
-    x = np.multiply(phi, np.cos(phi))
-    y = np.multiply(phi, np.sin(phi))
-    return x, y
+class ArchimedeanSpiral():
 
-x, y = archimedean_spiral(10)
+    def __init__(self, a, b, n, d):
+        # n -> number of spiral turns
+        # d -> number of points in which curve is discretized
+        # a -> changing a moves the centerpoint of spiral outward from the origin
+        # b -> controls the distance between the loops
+        self.a = a
+        self.b = b
+        self.n = n
+        self.d = d
 
-# shades of yellow
-# #FFEA00 -> bright yellow
-# #FFD700 -> gold
-
-fig = plt.figure(facecolor='black')
-ax = fig.add_subplot(111)
-
-ax.set_aspect('equal')
-# ax.axis('off') # I do not need turn off the axis as I have already made the figure background color black
-ax.set_title('Archimedean spiral', color='#FFD700', fontsize=16, fontname='Candara')
-ax.set_facecolor("black")
-
-ax.plot(x, y, linestyle='-', linewidth=4, color='#FFD700')
-
-fig.savefig('archimedean_spiral.png')
-
-plt.show()
+    def xy_archimedean_spiral(self):
+        phi = np.linspace(0, self.n*np.pi, self.n*self.d)
+        r = self.a + self.b*phi
+        x = np.multiply(r, np.cos(phi))
+        y = np.multiply(r, np.sin(phi))
+        return x, y
+    
+    def rotation(self, theta, orientation):
+        x, y = self.xy_archimedean_spiral()
+        rotation_matrix = np.array([[np.cos(theta), -np.sin(theta)], [np.sin(theta), np.cos(theta)]])
+        xy_array = np.array([x, y])
+        if orientation == 'anti-clockwise':
+            rotated_spiral = np.dot(rotation_matrix, xy_array)
+            x = rotated_spiral[0, :]
+            y = rotated_spiral[1, :]
+        elif orientation == 'clockwise':
+            rotated_spiral = np.dot(np.transpose(xy_array), rotation_matrix)
+            x = rotated_spiral[:, 0]
+            y = rotated_spiral[:, 1]
+        return x, y
+    
+    def reflection(self, theta, orientation):
+        # reflection about a line at an angle
+        x, y = self.rotation(theta, orientation)
+        reflection_matrix = np.array([[np.cos(2*theta), np.sin(2*theta)], [np.sin(2*theta), -np.cos(2*theta)]])
+        xy_array = np.array([x, y])
+        if orientation == 'anti-clockwise':
+            reflected_spiral = np.dot(reflection_matrix, xy_array)
+            x = reflected_spiral[0, :]
+            y = reflected_spiral[1, :]
+        elif orientation == 'clockwise':
+            reflected_spiral = np.dot(np.transpose(xy_array), reflection_matrix)
+            x = reflected_spiral[:, 0]
+            y = reflected_spiral[:, 1]
+        return x, y
+    
+def intertwine_two_vectors(vector1, vector2):
+    intertwined_vector = [None]*(len(vector1)+len(vector2))
+    intertwined_vector[::2] = vector1
+    intertwined_vector[1::2] = vector2
+    return intertwined_vector
