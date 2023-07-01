@@ -22,3 +22,5 @@ Execution work products of [archimedean_spiral_design.py](archimedean_spiral_des
 
 ## Archimedean spiral animation
 Execution work product of [archimedean_spiral_animation.py](archimedean_spiral_animation.py) module.
+
+https://github.com/ZaidShamsi/code_art/assets/103277308/15a97cd3-321c-4a5e-8489-330302a83df4
