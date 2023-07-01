@@ -5,8 +5,9 @@ Interesting reads:
 - [Logarithmic Spirals (Utah State University)](http://5010.mathed.usu.edu/Fall2022/MGriffeth/Log%20Spiral.html)
 
 ## Equations
-- $x=e^{k\phi}cos\phi$
-- $y=e^{k\phi}sin\phi$
+- $r=ae^{k\phi}+b$
+  - $x=rcos\phi$
+  - $y=rsin\phi$
 
 
 # Output
