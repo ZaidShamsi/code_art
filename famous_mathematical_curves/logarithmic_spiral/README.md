@@ -5,10 +5,26 @@ Interesting reads:
 - [Logarithmic Spirals (Utah State University)](http://5010.mathed.usu.edu/Fall2022/MGriffeth/Log%20Spiral.html)
 
 ## Equations
-- $x=e^{k\phi}cos\phi$
-- $y=e^{k\phi}sin\phi$
-
+- $r=ae^{k\phi}+b$
+  - $x=rcos\phi$
+  - $y=rsin\phi$
 
 # Output
 
+## Logarithmic spiral curve
+Execution work product of [logarithmic_spiral_plot.py](logarithmic_spiral_plot.py) module.
+
 ![Logarithmic spiral curve](logarithmic_spiral.png)
+
+## Logarithmic spiral design
+Execution work products of [logarithmic_spiral_design.py](logarithmic_spiral_design.py) module.
+
+![Logarithmic spiral design (rotated)](logarithmic_spiral_design(rotated).png)
+
+![Logarithmic spiral design (reflected)](logarithmic_spiral_design(reflected).png)
+
+## Logarithmic spiral animation
+Execution work product of [logarithmic_spiral_animation.py](logarithmic_spiral_animation.py) module.
+
+https://github.com/ZaidShamsi/code_art/assets/103277308/fe80ac2f-f1a7-41a5-942c-1c7213825dcd
+
