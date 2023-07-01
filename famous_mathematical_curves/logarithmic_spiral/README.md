@@ -26,4 +26,5 @@ Execution work products of [logarithmic_spiral_design.py](logarithmic_spiral_des
 ## Logarithmic spiral animation
 Execution work product of [logarithmic_spiral_animation.py](logarithmic_spiral_animation.py) module.
 
-<video src="logarithmic_spiral(rotation).mp4" controls title="logarithmic spiral animation"></video>
+https://github.com/ZaidShamsi/code_art/assets/103277308/fe80ac2f-f1a7-41a5-942c-1c7213825dcd
+
