@@ -19,6 +19,12 @@ Important reads:
 # Output
 Execution work product of [pendulum_waves.py](pendulum_waves.py) module.
 
+https://github.com/ZaidShamsi/code_art/assets/103277308/36c085c8-101d-4caf-ad84-01e43e62b41e
+
 Execution work product of [linear_pendulum_motion.py](linear_pendulum_motion.py) module.
 
+https://github.com/ZaidShamsi/code_art/assets/103277308/a88e68d3-cec8-4980-87b8-ba335718ad75
+
 Execution work product of [linear_and_non_linear_pendulum_motion.py](linear_and_non_linear_pendulum_motion.py) module.
+
+https://github.com/ZaidShamsi/code_art/assets/103277308/cb9d3c40-2db3-40dd-8910-76a84ce43266
