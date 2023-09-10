@@ -17,4 +17,8 @@ Important reads:
 # Output
 Execution work product of [spring_mass_motion.py](spring_mass_motion.py) module.
 
+https://github.com/ZaidShamsi/code_art/assets/103277308/4040a2fc-dd96-4e26-a8b6-1ce090d8cbc3
+
 Execution work product of [spring_mass_waves.py](spring_mass_waves.py) module.
+
+https://github.com/ZaidShamsi/code_art/assets/103277308/fa5525ad-ae04-4db6-a677-293b8baef127
