@@ -39,4 +39,10 @@ Beauty! Its amazing to see that simple algebraic equations can generate beautifu
   - ![logarithmic spiral](famous_mathematical_curves/logarithmic_spiral/logarithmic_spiral.png)
   
   See more curves at [famous mathematical curves](famous_mathematical_curves)
+
+### pendulum waves
+
+- [pendulum motion](ODEs/pendulum_motion)
+
+https://github.com/ZaidShamsi/code_art/assets/103277308/36c085c8-101d-4caf-ad84-01e43e62b41e
  
